@@ -1,0 +1,14 @@
+>mkdir gitrepo
+>git init
+>git remote add origin https://github.com/pramodsahoo568/rest-api-python.git
+>git push --set-upstream origin master
+>git pull https://github.com/pramodsahoo568/rest-api-python.git
+>mkdir src
+>cd src
+>copy app.py file to the current directory
+>git add app.py
+>git commit -m "app.py first version"
+>git push
+
+the new file will be visible in github
+ 
