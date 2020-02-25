@@ -1,13 +1,4 @@
-to get access token
- POST: http://127.0.0.1:5000/auth
- header : contenttype :application /json
+rest-api-python
 
- body:
- {
-	"username":"bob",
-	"password":"pass1"
-}
-
-
-Install MySQL connector:
-pip install mysql-connector-python
+Project demonstrate a CRUD application with FLASK Restfull API.
+It implements  JWT for secure communication.
