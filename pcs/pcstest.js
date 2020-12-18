@@ -10,11 +10,11 @@ xmlhttp_vpn.onreadystatechange = function() {
     processVpnUrl(myArr);
   }
 };
-xmlhttp_vpn.open("GET", vpn_url, true);
+xmlhttp_vpn.open("GET", DanaUrl(vpn_url), true);
 xmlhttp_vpn.send();
 
 function processVpnUrl(arr) {
-  console.log("processVpnUrl");
+  console.log("#################processVpnUrl##############");
   var out = "";
   var i;
   for(i = 0; i < arr.length; i++) {
@@ -43,19 +43,19 @@ xmlhttp_direct.onreadystatechange = function() {
     processDirectUrl(myArr);
   }
 };
-xmlhttp_direct.open("GET", direct_url, true);
+xmlhttp_direct.open("GET", DanaUrl(direct_url), true);
 xmlhttp_direct.send();
 
 function processDirectUrl(arr) {
-console.log("processDirectUrl");
+console.log("###########processDirectUrl#########");
   var out = "";
   var i;
-  /*for(i = 0; i < arr.length; i++) {
-    out += '<a href="' + arr[i].url + '">' + 
-    arr[i].display + '</a><br>';
+  for(i = 0; i < arr.length; i++) {
+    console.log(arr[i].url);
+ 
   }
-  document.getElementById("id01").innerHTML = out;
-  */
+  
+  
 }
 
 
