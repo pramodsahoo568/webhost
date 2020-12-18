@@ -25,7 +25,7 @@ function processVpnUrl(arr) {
      console.log("vpn URL:"+arr[i].url);
      console.log("Error:" + error);
    }
-   console.log("Direct URL:"+ arr[i].url);
+   console.log("VPN URL:"+ arr[i].url);
    if(directUrl.indexOf("DanaInfo")>0) {
      console.error("URL contains Danainfo URL not constructed properly:");
    }
@@ -55,7 +55,7 @@ console.log("###########processDirectUrl#########");
   var out = "";
   var i;
   for(i = 0; i < arr.length; i++) {
-    console.log(arr[i].url);
+    console.log("Direct Url: "+arr[i].url);
   }  
 }
 
