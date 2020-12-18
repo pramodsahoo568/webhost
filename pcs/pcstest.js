@@ -27,7 +27,7 @@ function processVpnUrl(arr) {
    }
    console.log("VPN URL:"+ arr[i].url);
    if(directUrl.indexOf("DanaInfo")>0) {
-     console.error("URL contains Danainfo URL not constructed properly:");
+     console.error("URL contains Danainfo URL not constructed properly");
    }
    
    
