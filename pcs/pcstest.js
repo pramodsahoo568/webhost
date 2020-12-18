@@ -5,7 +5,7 @@ var vpn_url = "vpn_url.txt";
 
 xmlhttp_vpn.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-	console.log(this.responseText);
+	//console.log(this.responseText);
     var myArr = JSON.parse(this.responseText);
     processVpnUrl(myArr);
   }
@@ -25,7 +25,7 @@ function processVpnUrl(arr) {
      console.log("vpn URL:"+arr[i].url);
      console.log("Error:" + error);
    }
-   console.log("Direct URL:"+ directUrl);
+   console.log("Direct URL:"+ arr[i].url);
    if(directUrl.indexOf("DanaInfo")>0) {
      console.error("URL contains Danainfo URL not constructed properly:");
    }
@@ -42,7 +42,7 @@ var direct_url = "direct_url.txt";
 
 xmlhttp_direct.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-	console.log(this.responseText);
+	//console.log(this.responseText);
     var myArr = JSON.parse(this.responseText);
     processDirectUrl(myArr);
   }
