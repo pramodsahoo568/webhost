@@ -1,0 +1,8 @@
+[
+	{
+	"url": "https://ebase2go.lufthansa.com/cportal/,DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+"
+	},
+	{
+	"url": "https://ebase2go.lufthansa.com/cportal/DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+menu"
+	}
+]
