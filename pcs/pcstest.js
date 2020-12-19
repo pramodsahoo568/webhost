@@ -4,7 +4,6 @@ var xmlhttp = new XMLHttpRequest();
 var vpn_direct_url_path = "direct_vpn_url_list.txt";
 
 var unwritten_direct_from_vpn_url_list = [];
-var direct_url_list = [];
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
 	  console.log(this.responseText);
