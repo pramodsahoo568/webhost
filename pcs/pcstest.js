@@ -56,9 +56,17 @@ console.log("###########processDirectUrl#########");
   var i;
   for(i = 0; i < arr.length; i++) {
     console.log("Direct Url: "+arr[i].url);
+    checkForValidDirectUrl(arr[i].url);
   }  
 }
 
+function checkForValidDirectUrl(url) {
+    try {
+      var rewrittenUrl = DanaUrl(url);
+    } catch (error) {
+      console.error("Url Parse error : backslash at the end not allowed \n Or unsupported char is present");
+    }
+}
 
 
 var winpath = window.location
