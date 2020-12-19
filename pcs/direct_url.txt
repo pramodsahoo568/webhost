@@ -3,7 +3,4 @@
 	"url": "https://craswa.cms.fra.dlh.de:4443/cportal/"
 	}
 
-    {
-	"url": "https&#58;//colleagueconnect.mysite.uat.mmc.com/_layouts/15/HashTagProfile.aspx?TermID=d04c5943-709c-45b7-96d2-e23a015e00e8"
-	}
 ]
