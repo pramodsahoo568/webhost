@@ -19,25 +19,14 @@ xmlhttp.send();
 function processUrl(responsedata) {
   console.log("#################processUrl##############");
   console.log("direct_urls:"+responsedata.direct_urls);
-  /*out = "";
-  var i;
-  for(i = 0; i < arr.length; i++) {
-    var directUrl ="";
-   try {
-    directUrl=  DanaOrigUrl(arr[i].url); 
-   } catch (error) {
-     console.log("vpn URL:"+arr[i].url);
-     console.log("Error:" + error);
-   }
-   if(directUrl.length>5) { 
-    unwritten_direct_from_vpn_url_list.push(directUrl);
-   }
-   checkValidVPNUrl(directUrl);
-   
-  } */
-  //document.getElementById("id01").innerHTML = out;
-  
+  var direct_url_list =  responsedata.direct_urls;
+  var vpn_url_list = responsedata.vpn_urls;
+
+  processVpnUrl(vpn_url_list);
+  processDirectUrl(direct_url_list);  
 }
+
+
 
 
 
@@ -49,9 +38,10 @@ function processVpnUrl(arr) {
   for(i = 0; i < arr.length; i++) {
     var directUrl ="";
    try {
+    console.log("vpn URL:"+arr[i].url);
     directUrl=  DanaOrigUrl(arr[i].url); 
    } catch (error) {
-     console.log("vpn URL:"+arr[i].url);
+     
      console.log("Error:" + error);
    }
    if(directUrl.length>5) { 
