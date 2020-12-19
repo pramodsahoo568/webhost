@@ -1,0 +1,11 @@
+{
+  "direct_urls": [
+    "https://craswa.cms.fra.dlh.de:4443/cportal/",
+    "https://servicedesk.lkab.com/SDNotify.do?action=getMailWindow&notifyModule=Request&mode=E-Mail&id=282329&notifyTo=REQREPLY"
+  ],
+   "vpn_urls": [
+    "https://ebase2go.lufthansa.com/cportal/,DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+",
+    "https://ebase2go.lufthansa.com/cportal/DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+menu",
+  ]
+
+}
