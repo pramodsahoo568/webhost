@@ -5,7 +5,7 @@
   ],
    "vpn_urls": [
     "https://ebase2go.lufthansa.com/cportal/,DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+",
-    "https://ebase2go.lufthansa.com/cportal/DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+menu",
+    "https://ebase2go.lufthansa.com/cportal/DanaInfo=craswa.cms.fra.dlh.de,Port=4443,SSL+menu"
   ]
 
 }
