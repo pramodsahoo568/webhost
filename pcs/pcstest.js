@@ -67,7 +67,7 @@ function validateVPNUrl(vpn_url) {
 }
 
 function validateUnwrittenVPNUrlWithDirectUrl(vpn_url_list, direct_url_list) {
-
+  console.log("################# validateUnwrittenVPNUrlWithDirectUrl #################");
   var directUrl = "";
   for (i = 0; i < vpn_url_list.length; i++) {
     var vpn_url = vpn_url_list[i];
