@@ -2,5 +2,4 @@
 	{
 	"url": "https://craswa.cms.fra.dlh.de:4443/cportal/"
 	}
-
 ]
