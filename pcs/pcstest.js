@@ -55,14 +55,14 @@ function validateUnwrittenOriginalUrl(vpn_url) {
     console.log("Error:" + error);
   }
   if(directUrl.indexOf("DanaInfo")>0) {
-    console.error("Unwritten URL contains does Danainfo, URL not constructed properly");
+    console.error("Unwritten URL contains Danainfo, URL not constructed properly");
   }
 }
 
 
 function validateVPNUrl(vpn_url) {
-  if(vpn_url.indexOf("DanaInfo")>0) {
-    console.error("VPN URL contains  Danainfo , Not Written ,going direct to server ");
+  if(vpn_url.indexOf("DanaInfo")<0) {
+    console.error("VPN URL Does not contain  Danainfo , Not Re-written ,going direct to server ");
   }
   
 }
