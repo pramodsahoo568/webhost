@@ -86,7 +86,6 @@ console.log("###########processDirectUrl#########");
   var i;
   for(i = 0; i < arr.length; i++) {
     console.log("Direct Url: "+arr[i]);
-    direct_url_list(arr[i]);
     checkForValidDirectUrl(arr[i]);
   }  
 }
