@@ -9,7 +9,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
 	  console.log(this.responseText);
     var responsedata = JSON.parse(this.responseText);
-    processUrl(myArr);
+    processUrl(responsedata);
   }
 };
 xmlhttp.open("GET", DanaUrl(vpn_direct_url_path), true);
