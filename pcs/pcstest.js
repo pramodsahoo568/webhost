@@ -36,29 +36,33 @@ function processVpnUrl(arr) {
   var out = "";
   var i;
   for(i = 0; i < arr.length; i++) {
-    var directUrl ="";
-   try {
-    console.log("vpn URL:"+arr[i].url);
-    directUrl=  DanaOrigUrl(arr[i].url); 
-   } catch (error) {
-     
-     console.log("Error:" + error);
-   }
-   if(directUrl.length>5) { 
-    unwritten_direct_from_vpn_url_list.push(directUrl);
-   }
-   checkValidVPNUrl(directUrl);
+    var vpn_url= arr[i];
+    console.log("vpn URL:"+vpn_url);
+   validateVPNUrl(vpn_url);
+   validateUnwrittenOriginalUrl(vpn_url);
    
   }
   //document.getElementById("id01").innerHTML = out;
   
 }
 
+function validateUnwrittenOriginalUrl(vpn_url) {
+
+  var directUrl ="";
+  try {
+   directUrl=  DanaOrigUrl(vpn_url); 
+  } catch (error) {
+    console.log("Error:" + error);
+  }
+  if(directUrl.indexOf("DanaInfo")>0) {
+    console.error("Unwritten URL contains does Danainfo, URL not constructed properly");
+  }
+}
+
+
 function checkValidVPNUrl(url) {
   console.log("VPN URL:"+ url);
-  if(directUrl.indexOf("DanaInfo")>0) {
-    console.error("URL contains Danainfo URL not constructed properly");
-  }
+  
 }
 /*
 var xmlhttp_direct = new XMLHttpRequest();
@@ -79,9 +83,9 @@ console.log("###########processDirectUrl#########");
   var out = "";
   var i;
   for(i = 0; i < arr.length; i++) {
-    console.log("Direct Url: "+arr[i].url);
-    direct_url_list(arr[i].url);
-    checkForValidDirectUrl(arr[i].url);
+    console.log("Direct Url: "+arr[i]);
+    direct_url_list(arr[i]);
+    checkForValidDirectUrl(arr[i]);
   }  
 }
 
