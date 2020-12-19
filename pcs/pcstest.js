@@ -79,7 +79,7 @@ function validateUnwrittenVPNUrlWithDirectUrl(vpn_url_list, direct_url_list) {
       console.log("Error:" + error);
     }
 
-    if (directUrl in direct_url_list) {
+    if (direct_url_list.includes(directUrl)) {
       console.log("Unwritten VPN DanaOrigUrl URL matches with direct url");
     } else {
       console.error("Unwritten VPN DanaOrigUrl URL Does not matches with direct url");
