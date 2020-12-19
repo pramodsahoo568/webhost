@@ -60,8 +60,10 @@ function validateUnwrittenOriginalUrl(vpn_url) {
 }
 
 
-function checkValidVPNUrl(url) {
-  console.log("VPN URL:"+ url);
+function validateVPNUrl(vpn_url) {
+  if(vpn_url.indexOf("DanaInfo")>0) {
+    console.error("VPN URL contains  Danainfo , Not Written ,going direct to server ");
+  }
   
 }
 /*
