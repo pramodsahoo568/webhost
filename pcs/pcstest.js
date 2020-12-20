@@ -1,25 +1,41 @@
-
-
-var xmlhttp = new XMLHttpRequest();
-var vpn_direct_url_path = "direct_vpn_url_list.txt";
-
+var direct_url_list = [];
+var vpn_url_list = [];
 var unwritten_direct_from_vpn_url_list = [];
-xmlhttp.onreadystatechange = function () {
+
+// get vpn url list
+var xmlhttp_vpn = new XMLHttpRequest();
+var vpn_url_path = "vpn_urls.json";
+
+xmlhttp_vpn.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     console.log(this.responseText);
     var responsedata = JSON.parse(this.responseText);
-    processUrl(responsedata);
+    vpn_url_list = responsedata;
+    //processUrl(responsedata);
   }
 };
-xmlhttp.open("GET", DanaUrl(vpn_direct_url_path), true);
-xmlhttp.send();
+xmlhttp_vpn.open("GET", DanaUrl(vpn_url_path), true);
+xmlhttp_vpn.send();
 
 
-function processUrl(responsedata) {
+// get direct url list
+var xmlhttp_direct = new XMLHttpRequest();
+var direct_url_path = "direct_urls.json";
+
+xmlhttp_direct.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(this.responseText);
+    var responsedata = JSON.parse(this.responseText);
+    direct_url_list = responsedata;
+  }
+};
+xmlhttp_direct.open("GET", DanaUrl(direct_url_path), true);
+xmlhttp_direct.send();
+
+
+
+function processUrl() {
   console.log("#################processUrl##############");
-  console.log("direct_urls:" + responsedata.direct_urls);
-  var direct_url_list = responsedata.direct_urls;
-  var vpn_url_list = responsedata.vpn_urls;
 
   processVpnUrl(vpn_url_list);
   processDirectUrl(direct_url_list);
