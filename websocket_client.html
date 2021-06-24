@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html>
-<body>
+  <meta charset="utf-8" />
+  <title>WebSocket Test</title>
+  <script language="javascript" type="text/javascript">
 
-<h1>The onclick Event</h1>
+  var wsUri = "wss://echo.websocket.org/";
+  var output;
 
-<p>The onclick event is used to trigger a function when an element is clicked on.</p>
+  function init()
+  {
+    output = document.getElementById("output");
+    testWebSocket();
+  }
 
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+  function testWebSocket()
+  {
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function(evt) { onOpen(evt) };
+    websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror = function(evt) { onError(evt) };
+  }
 
-<button onclick="myFunction()">connect  websocket...</button>
+  function onOpen(evt)
+  {
+    writeToScreen("CONNECTED");
+    doSend("WebSocket rocks");
+  }
 
-<p id="demo"></p>
+  function onClose(evt)
+  {
+    writeToScreen("DISCONNECTED");
+  }
 
+  function onMessage(evt)
+  {
+    writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data+'</span>');
+    websocket.close();
+  }
 
+  function onError(evt)
+  {
+    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+  }
 
-<script src="websocket_client.js"></script>
+  function doSend(message)
+  {
+    writeToScreen("SENT: " + message);
+    websocket.send(message);
+  }
 
-</body>
-</html>
+  function writeToScreen(message)
+  {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+  }
+
+  window.addEventListener("load", init, false);
+
+  </script>
+
+  <h2>WebSocket Test</h2>
+
+  <div id="output"></div>
