@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Program to print occurance of elements in unsorted array</h1>
+
+<p>
+<pre>
+<code  style = "color:blue; font-size:16px;" >
+
+	#include &ltQCoreApplication&gt
+	#include &ltiostream&gt
+	#include &ltmap&gt
+	#include &ltmap&gt
+
+
+	using namespace std;
+	int main(int argc, char *argv[])
+	{
+		QCoreApplication a(argc, argv);
+
+		std::vector&ltint&gt numbers = {1,4,3,1,5,2,4};
+
+		std::map&ltint,int&gt unique_map;
+		std::map&ltint,int&gt::iterator map_iterator;
+
+		std::vector&ltint&gt::iterator it_numbers;
+		for(it_numbers=numbers.begin();it_numbers!=numbers.end();it_numbers++) {
+			int num = *it_numbers;
+			map_iterator =  unique_map.find(num);
+			if(unique_map.find(num)==unique_map.end()) {
+			   unique_map.insert(std::make_pair(num,1));
+
+			}
+			else {
+				map_iterator-&gtsecond = map_iterator-&gtsecond+1;
+			}
+		 }
+		 cout&lt&lt"number"&lt&lt" : "&lt&lt"count"&lt&ltstd::endl;
+		for(map_iterator=unique_map.begin();map_iterator!=unique_map.end();map_iterator++) {
+			int number = map_iterator-&gtfirst;
+			int count = map_iterator-&gtsecond;
+			cout&lt&ltnumber&lt&lt"     :     "&lt&ltcount&lt&ltstd::endl;
+		}
+
+
+
+		return a.exec();
+	}
+
+</code>
+</pre>
+
+</p>
+
+</body>
+</html>

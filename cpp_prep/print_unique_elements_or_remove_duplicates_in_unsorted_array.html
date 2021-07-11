@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Program to print unique elements print or remove duplicates in unsorted array</h1>
+
+<p>
+<pre>
+<code  style = "color:blue; font-size:16px;" >
+
+	#include &ltQCoreApplication&gt
+	#include &ltiostream&gt
+	#include &ltmap&gt
+	#include &ltunordered_map&gt
+
+	using namespace std;
+	int main(int argc, char *argv[])
+	{
+		QCoreApplication a(argc, argv);
+		std::vector&ltint&gt numbers = {1,4,3,1,5,2,4};
+		std::unordered_map&ltint,int&gt unique_map;
+		std::unordered_map&ltint,int&gt::iterator map_it;
+
+		std::vector&ltint&gt::iterator it_numbers;
+		for(it_numbers=numbers.begin();it_numbers!=numbers.end();it_numbers++) {
+			int num = *it_numbers;
+			map_it =  unique_map.find(num);
+			if(unique_map.find(num)==unique_map.end()) {
+			   unique_map.insert(std::make_pair(num,1));
+			   cout&lt&ltnum&lt&lt" ";
+			}
+		 }
+		return a.exec();
+	}
+
+</code>
+</pre>
+
+</p>
+
+</body>
+</html>
