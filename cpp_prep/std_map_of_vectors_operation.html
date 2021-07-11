@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Program to demonstrate Map of Vectors operation</h1>
+
+<p>
+<pre>
+<code  style = "color:blue; font-size:16px;" >
+
+	#include &ltQCoreApplication&gt
+	#include &ltmap&gt
+	#include &ltvector&gt
+	#include &ltiostream&gt
+
+	using namespace std;
+
+	int main(int argc, char *argv[])
+	{
+		QCoreApplication a(argc, argv);
+		//Display Items in Vector
+		std::vector&ltint&gt vecItems = {1,2,3,4};
+		std::vector&ltint&gt::iterator it_vecItem;
+
+		for(it_vecItem = vecItems.begin();it_vecItem!=vecItems.end();it_vecItem++) {
+			int item = *it_vecItem;
+			cout&lt&ltitem&lt&lt" ";
+		}
+
+		// Create a Map of vectors
+		std::map&ltint, std::vector&ltint&gt&gt mapVector;
+		std::map&ltint, std::vector&ltint&gt&gt::iterator it_mapVector;
+		mapVector.insert(std::make_pair(1,vecItems));
+
+
+		//Display Map of vector
+		cout&lt&ltstd::endl&lt&lt"Map of vector Items"&lt&ltstd::endl;
+		for(it_mapVector=mapVector.begin();it_mapVector!=mapVector.end();it_mapVector++){
+			cout&lt&lt(*it_mapVector).first&lt&ltstd::endl;
+			 std::vector&ltint&gt vec = (*it_mapVector).second;
+			for(auto it = vec.begin();it!=vec.end();it++) {
+				int item = *it;
+				cout&lt&ltitem&lt&lt" ";
+			}
+		}
+		return a.exec();
+	}
+
+</code>
+</pre>
+
+</p>
+
+</body>
+</html>
