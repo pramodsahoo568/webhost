@@ -5,7 +5,7 @@ myObj = {"name":"Path", "filename":"https://pramodsahoo568.github.io/webhost/dro
 filepath = myObj.filename;
 
 var a = document.getElementById('link2'); //or grab it by tagname etc
-a.href = "/index1.html";
+a.href = "/webhost/index1.html";
 
 var b = document.getElementById('linkimage1'); //or grab it by tagname etc
 b.href = filepath;
