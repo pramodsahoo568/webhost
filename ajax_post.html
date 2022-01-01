@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+			
+		 $('#ajaxBtn').click(function(){
+			
+			$.ajax('/jquery/submitData', {
+				type: 'POST',  // http method
+				data: { myData: 'This is my data.' },  // data to submit
+				success: function (data, status, xhr) {
+					$('p').append('status: ' + status + ', data: ' + data);
+				},
+				error: function (jqXhr, textStatus, errorMessage) {
+						$('p').append('Error: ' + errorMessage);
+					}
+			});
+		});
+    });
+    </script>
+</head>
