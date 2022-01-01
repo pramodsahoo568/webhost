@@ -11,9 +11,8 @@
 			
 		 $('#ajaxBtn').click(function(){
 			
-			$.ajax('/jquery/submitData', {
-				type: 'POST',  // http method
-				data: { myData: 'This is my data.' },  // data to submit
+			$.ajax('/webhost/dropdown_arrow_normal.svg', {
+				type: 'GET',  // http method
 				success: function (data, status, xhr) {
 					$('p').append('status: ' + status + ', data: ' + data);
 				},
