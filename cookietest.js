@@ -43,5 +43,5 @@ function myRedirect() {
     document.cookie = name + "=" + (value || "") + "; path=/";
 	console.log("2:"+document.cookie);
     document.getElementById("demo2").innerHTML = "" + "Cookie is Set";
-	window.location.replace(""/webhost/cookie_redirect1.html";");
+	window.location.replace("/webhost/cookie_redirect1.html");
 }
