@@ -5,7 +5,7 @@ myObj = {"name":"Path", "filename":"https://pramodsahoo568.github.io/webhost/dro
 filepath = myObj.filename;
 
 var a = document.getElementById('link2'); //or grab it by tagname etc
-a.href = "/webhost/index1.html";
+a.href = "/webhost/cookie_redirect1.html";
 
 var b = document.getElementById('linkimage1'); //or grab it by tagname etc
 b.href = filepath;
@@ -30,3 +30,18 @@ function myFunction() {
     document.getElementById("demo").innerHTML = "" + "Cookie is Set";;
 }
 
+
+
+function myRedirect() {
+	
+	var date = new Date();
+	date.setTime(date.getTime() + (2 * 60 * 60 * 1000));
+	var expires = date.toGMTString();
+	name='Access_Token';
+	value='{"User_ID":"129892","Token":"2459592165236-1022959-37688923"}'
+    console.log("1:"+document.cookie);
+    document.cookie = name + "=" + (value || "") + "; path=/";
+	console.log("2:"+document.cookie);
+    document.getElementById("demo2").innerHTML = "" + "Cookie is Set";
+	window.location.replace(""/webhost/cookie_redirect1.html";");
+}

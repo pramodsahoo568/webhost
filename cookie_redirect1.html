@@ -7,21 +7,23 @@
 <p>The onclick event is used to trigger a function when an element is clicked on.</p>
 
 <p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-</b>
 
-<button onclick="myFunction()">Set Cookie </button>
+<button onclick="myFunction()">Generate Random number from External JS</button>
 
 <p id="demo"></p>
 
 
-<a id="link2" href="">Index1</a></br>
+<script>
+
+ck = ""+ document.cookie;
+ if(ck.indexOf("Access_Token")>0) 
+ {
+	alert("Access_Token!");
+ }
+ 
 
 
-<button onclick="myRedirect()">Set Cookie and Redirect </button>
-
-<p id="demo2"></p>
-
-<script src="cookietest.js"></script>
+</script>
 
 </body>
 </html>
