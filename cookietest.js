@@ -8,7 +8,7 @@ var a = document.getElementById('link2'); //or grab it by tagname etc
 a.href = "/webhost/cookie_redirect1.html";
 
 var b = document.getElementById('linkimage1'); //or grab it by tagname etc
-b.href = filepath;
+
 
 //Access_Token={"User_ID":"129892","Token":"2459592165236-1022959-37688923"}
 
