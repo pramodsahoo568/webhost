@@ -25,3 +25,10 @@ https://pramodsahoo568.github.io/webhost/websocket_client.html
 
 https://pramodsahoo568.github.io/webhost/cpp_prep/index.html
 
+https://pramodsahoo568.github.io/webhost/ajax_get.html
+https://pramodsahoo568.github.io/webhost/ajax_post.html
+https://pramodsahoo568.github.io/webhost/fetch_url.html
+https://pramodsahoo568.github.io/webhost/fetch_url2.html
+https://pramodsahoo568.github.io/webhost/cookietest.html
+
+
